@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 [ApiController]
 [Route("/error")]
 public class ErrorController : ControllerBase {
+    [HttpGet]
     public ActionResult error(){
         return StatusCode((int)HttpStatusCode.InternalServerError, "An internal error occured please try after sometime");
     }

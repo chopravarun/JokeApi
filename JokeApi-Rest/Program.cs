@@ -39,6 +39,10 @@ var app = builder.Build();
 {
     app.UseExceptionHandler("/error");
     app.UseHttpsRedirection();
+    app.UseSwagger();
+    app.UseSwaggerUI(c=>{
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Joke api v1");
+    });
     app.UseAuthorization();
     app.MapControllers();
     app.Run();
