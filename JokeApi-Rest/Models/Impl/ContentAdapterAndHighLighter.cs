@@ -19,7 +19,7 @@ public class ContentAdapterAndHighLighter{
 
     public ContentAdapterAndHighLighter highlightContent(){
         String searchTerm = _internalResponse.search_term;
-        _internalResponse.results.ForEach(joke=>joke.joke = joke.joke.Replace(searchTerm, $"<em>{searchTerm}</em>"));
+        _internalResponse.results.ForEach(joke=>joke.joke = joke.joke.Replace(searchTerm, $"<em>{searchTerm}</em>", ignoreCase:true, culture:null));
         return this;
     }
 

@@ -1,3 +1,5 @@
+using System.Web;
+
 public class JokeSearchRequest {
     public String _term {get;}
 
@@ -6,10 +8,11 @@ public class JokeSearchRequest {
     public int _limit{get;}
 
     public JokeSearchRequest(String term, int? page, int? limit){
-        _term = term;
-        _page = page ?? 1;
+        _term = HttpUtility.HtmlEncode(term);
+        int tmpPage = page ?? 1;
+        _page = tmpPage < 0 ? 0:tmpPage;
         int tmp = (limit ?? 20); 
-        _limit =  tmp > 30 ? 30:tmp;
+        _limit =  tmp > 30 ? 30:tmp<0?0:tmp;
     }
 
     public override string ToString()
