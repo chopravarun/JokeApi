@@ -1,5 +1,12 @@
 # JokeApi
 
+## Run Application 
+```http
+1. Clone the application
+2. navigate inside JokeApi project from terminal 
+3. run "dotnet run --project JokeApi-Rest"
+```
+
 ## API Reference
 
 #### Random joke
