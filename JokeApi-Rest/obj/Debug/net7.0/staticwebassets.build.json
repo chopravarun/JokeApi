@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "TJB3kPzlKEftMFuwLPqGiEj38tf9rBOvKpHeRNtQ+Jw=",
+  "Source": "JokeApi-Rest",
+  "BasePath": "_content/JokeApi-Rest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
